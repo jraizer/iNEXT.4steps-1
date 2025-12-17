@@ -561,7 +561,7 @@ ggCompleteness <- function(output) {
   
   
   ggplot(output, aes(x = Order.q, y = Estimate.SC, colour = Assemblage))+
-    geom_line(size = 1.2) +
+    geom_line(linewidth = 1.2) +
     scale_colour_manual(values = cbPalette) +
     geom_ribbon(aes(ymin = SC.LCL, ymax = SC.UCL, fill = Assemblage), alpha = 0.2, linetype=0) +
     scale_fill_manual(values = cbPalette) +
@@ -973,7 +973,7 @@ ggEvenness <- function(output) {
   }
   
   fig = ggplot(classdata, aes(x = Order.q, y = Evenness, colour = Assemblage)) +
-    geom_line(size = 1.2) +
+    geom_line(linewidth = 1.2) +
     geom_ribbon(aes(ymin=Even.LCL, ymax=Even.UCL, fill = Assemblage),
                 alpha=0.2, linetype=0) +
     scale_colour_manual(values = cbPalette) +
